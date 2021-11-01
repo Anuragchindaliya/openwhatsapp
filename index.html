@@ -1,157 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>open number in Whatsapp</title>
-    <link rel="icon" href="./images/favicon-64x64.ico" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      rel="stylesheet"
-    />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whatsapp opener</title>
+  <link rel="icon" href="./images/favicon-64x64.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
 
-      body {
-        background-color: #eee;
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-      }
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-      .height {
-        height: 100vh;
-      }
-
-      .search {
-        position: relative;
-        box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
-      }
-
-      .search input {
-        height: 60px;
-        text-indent: 25px;
-        border: 2px solid #d6d4d4;
-      }
-
-      .search input:focus {
-        box-shadow: none;
-        border: 2px solid rgb(209, 0, 0);
-      }
-
-      .search .fa-search {
-        position: absolute;
-        top: 20px;
-        left: 16px;
-      }
-
-      .search button {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        height: 50px;
-        width: 110px;
-        background: rgb(26, 196, 91);
-      }
-    </style>
-  </head>
-  <body>
-    <!--  9625891968897 -->
-    <div class="container">
-      <div class="row height d-flex justify-content-center align-items-center">
-        <div class="col-md-8">
-          <div class="search">
-            <!-- <i class="fab fa-whatsapp"></i> -->
-            <!-- <select>
+<body>
+  <!--  9625891968897 -->
+  <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-8">
+        <div class="search">
+          <!-- <i class="fab fa-whatsapp"></i> -->
+          <!-- <select>
               <option>+91</option>
               <option>+91</option>
               <option>+91</option>
             </select> -->
-            <input
-              type="tel"
-              class="form-control"
-              id="link"
-              placeholder="Whatsapp Number"
-              minlength="10"
-              maxlength="10"
-              pattern="^[6789]\d{9}$"
-              oninput="checkLength(event)"
-            />
-            <button class="btn btn-primary" id="go">Go</button>
-          </div>
-          <div id="errorMsg"></div>
+          <input type="tel" class="form-control" id="link" placeholder="Whatsapp Number or Start new chat"
+            minlength="10" maxlength="10" pattern="^[6789]\d{9}$" oninput="checkLength(event)" />
+          <button class="btn btn-primary" id="go">Go</button>
+        </div>
+        <div id="errorMsg" class="text-danger"></div>
+      </div>
+    </div>
+    <div class="row p-5">
+      <div class="col-md-8 offset-2">
+        <div class="input-group">
+          <select class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Dropdown
+            <option value="91">+91</option>
+            <option value="+44">+44</option>
+            <option value="+1">+1</option>
+          </select>
+          <input type="tel" class="form-control" id="link" placeholder="Whatsapp Number or Start new chat"
+          minlength="10" maxlength="10" pattern="^[6789]\d{9}$" oninput="checkLength(event)" aria-label="Search buttons">
+          <button class="btn btn-success px-5" type="button" aria-expanded="false"> Go</button>
         </div>
       </div>
     </div>
-    <script>
-      window.onload = function () {
-        // alert("loaded");
-        confirm("are you hacker");
-        var input = document.querySelector("#link");
-        var go = document.querySelector("#go");
-        var errorMsg = document.querySelector("#errorMsg");
-        input.focus();
-        function checkLength(e) {
-          if (e.target.value.length == 10) {
-            input.style.border = "2px solid rgb(26, 196, 91)";
-          }
-        }
-        //   input.addEventListener("change", ()=>{checkLength});
+  </div>
+  <!-- <script src="./script.js"></script> -->
+</body>
 
-        function clipboardText() {
-          navigator.clipboard
-            .readText()
-            .then((text) => {
-              if (isNaN(text)) {
-                if (
-                  confirm(
-                    `Please copy only number \nDo want to go with this:\n${text}`
-                  )
-                ) {
-                  input.value = text;
-                }
-              } else {
-                input.value = text;
-                if (input.value.length == 10) {
-                  input.style.border = "2px solid rgb(26, 196, 91)";
-                }
-              }
-            })
-            .catch((err) => {
-              input.value = "9811457143";
-              errorMsg.innerHTML = `error in clip board`;
-            });
-        }
-        clipboardText();
-        window.addEventListener("keyup", function (event) {
-          // Number 13 is the "Enter" key on the keyboard
-          if (event.keyCode === 13) {
-            // Cancel the default action, if needed
-            event.preventDefault();
-            // Trigger the button element with a click
-            m4wLink(input.value);
-          }
-        });
-        go.addEventListener("click", () => {
-          m4wLink(input.value);
-        });
-        function m4wLink(text) {
-          if (text.length == 10) {
-            window.location.replace(`https:wa.me/91${text}`);
-          } else {
-            if(confirm(
-              "number is not in correct format do you want to go with this"
-            )){
-              window.location.replace(`https:wa.me/91${text}`);
-            }
-          }
-        }
-      };
-    </script>
-  </body>
 </html>
