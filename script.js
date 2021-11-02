@@ -1,6 +1,6 @@
 window.onload = function () {
   // alert("loaded");
-  confirm("are you hacker");
+  // confirm("are you hacker");
   var input = document.querySelector("#link");
   var go = document.querySelector("#go");
   var errorMsg = document.querySelector("#errorMsg");
@@ -56,7 +56,8 @@ window.onload = function () {
       if (
         confirm("number is not in correct format do you want to go with this")
       ) {
-        window.location.replace(`https:wa.me/91${text}`);
+        window.location.replace(`https://wa.me/91${text}`);
+        
       }
     }
   }

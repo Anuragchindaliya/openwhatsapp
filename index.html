@@ -15,16 +15,15 @@
 
 <body>
   <!--  9625891968897 -->
-  <div class="container">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 p-5"><img src="./images/brand-icon.png" width="100%"></div>
+      
+    </div>
     <div class="row height d-flex justify-content-center align-items-center">
       <div class="col-md-8">
         <div class="search">
           <!-- <i class="fab fa-whatsapp"></i> -->
-          <!-- <select>
-              <option>+91</option>
-              <option>+91</option>
-              <option>+91</option>
-            </select> -->
           <input type="tel" class="form-control" id="link" placeholder="Whatsapp Number or Start new chat"
             minlength="10" maxlength="10" pattern="^[6789]\d{9}$" oninput="checkLength(event)" />
           <button class="btn btn-primary" id="go">Go</button>
@@ -32,9 +31,9 @@
         <div id="errorMsg" class="text-danger"></div>
       </div>
     </div>
-    <div class="row p-5">
-      <div class="col-md-8 offset-2">
-        <div class="input-group">
+    <!-- <div class="row p-5">
+      <div class="col-md-8 offset-md-2">
+        <div class="input-group search">
           <select class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">Dropdown
             <option value="91">+91</option>
@@ -46,9 +45,9 @@
           <button class="btn btn-success px-5" type="button" aria-expanded="false"> Go</button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <!-- <script src="./script.js"></script> -->
+  <script src="./script.js"></script>
 </body>
 
 </html>
