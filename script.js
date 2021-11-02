@@ -51,7 +51,7 @@ window.onload = function () {
   });
   function m4wLink(text) {
     if (text.length == 10) {
-      window.location.replace(`https:wa.me/91${text}`);
+      window.location.replace(`https://wa.me/91${text}`);
     } else {
       if (
         confirm("number is not in correct format do you want to go with this")
