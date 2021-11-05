@@ -1,44 +1,55 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap"); */
 
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+body {
+  background-color: #eee;
+  /* font-family: "Poppins", sans-serif; */
+  font-weight: 300;
+}
 
-      body {
-        background-color: #eee;
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-      }
-
-      /* .height {
+/* .height {
         height: 100vh;
       } */
 
-      .search {
-        position: relative;
-        box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
-      }
+.search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
 
-      .search input {
-        height: 60px;
-        text-indent: 25px;
-        border: 2px solid #d6d4d4;
-      }
+.search input[type=tel] {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #d6d4d4;
+}
 
-      .search input:focus {
-        box-shadow: none;
-        border: 2px solid rgb(209, 0, 0);
-      }
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid rgb(209, 0, 0);
+}
 
-      .search .fa-search {
-        position: absolute;
-        top: 20px;
-        left: 16px;
-      }
+.search .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
 
-      .search button {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        height: 50px;
-        width: 110px;
-        background: rgb(26, 196, 91);
-      }
-    
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: rgb(26, 196, 91);
+}
+
+ .country-code{
+  position: absolute!important;
+  height: 91%;
+  top: 3px;
+  left: 3px;
+}
+@media only screen and (max-width:600px) {
+  .search button{
+    width: 15vw;
+    min-width: 20px;
+  }
+}

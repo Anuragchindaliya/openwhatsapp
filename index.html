@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp opener</title>
+    <link rel="icon" href="./images/favicon-64x64.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Whatsapp opener</title>
-  <link rel="icon" href="./images/favicon-64x64.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body>
-  <!--  9625891968897 -->
-  <!--  +91 82870 49939 -->
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 offset-md-3 p-5"><img src="./images/brand-icon.png" width="100%"></div>
-      
-    </div>
-    <div class="row height d-flex justify-content-center align-items-center">
-      <div class="col-md-8">
-        <div class="search">
-          <!-- <i class="fab fa-whatsapp"></i> -->
-          <input type="tel" class="form-control" id="link" placeholder="Whatsapp Number or Start new chat"
-            minlength="10" maxlength="10" pattern="^[6789]\d{9}$" oninput="checkLength(event)" />
-          <button class="btn btn-primary" id="go">Go</button>
+  <body>
+    <!--  9625891968897 -->
+    <!--  9625891968 -->
+    <!--  +91 82870 49939 -->
+    <!--  +44 82870 49939 -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <img src="./images/brand-icon.png" width="100%" />
         </div>
-        <div id="errorMsg" class="text-danger"></div>
       </div>
-    </div>
-    <!-- <div class="row p-5">
+      <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          <div class="search form-group">
+            <input
+              type="text"
+              id="dial-code"
+              list="countryCode"
+              style="width: 70px; position: absolute; height: 90%; margin: 3px"
+            />
+            <datalist id="countryCode">
+              <option value="+91" selected>+91  </option>
+              <option value="+44">+44</option>
+              <option value="+1">+1</option>
+              <!-- <option value="">+1</option> -->
+            </datalist>
+            <input
+              type="tel"
+              class="form-control ps-5"
+              id="link"
+              placeholder="Whatsapp No. to Start new chat"
+              minlength="10"
+              maxlength="10"
+              pattern="^[6789]\d{9}$"
+            />
+            <button class="btn btn-primary" id="go">Go</button>
+          </div>
+          <div class="form-group col-md-12 mt-3">
+            <label for="textMsg">Text to include in chat</label>
+            <textarea class="form-control" id="textMsg" rows="3"></textarea>
+          </div>
+          <div id="errorMsg" class="text-danger"></div>
+        </div>
+      </div>
+
+      <!-- <div class="row p-5">
       <div class="col-md-8 offset-md-2">
         <div class="input-group search">
           <select class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -47,8 +78,7 @@
         </div>
       </div>
     </div> -->
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
