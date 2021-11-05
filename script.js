@@ -16,16 +16,25 @@ window.onload = function () {
     navigator.clipboard
       .readText()
       .then((text) => {
-        if (isNaN(text)) {
+        var number = text.replace(/\s/g, "");
+
+        if (text[0] === "+") {
+          //extract country code
+          var countryCodeLength = number.length - 10;
+          var countryCode = number.substr(0, countryCodeLength);
+          number = number.substr(countryCodeLength, 10);
+        }
+        console.log(countryCode, number);
+        if (isNaN(number)) {
           if (
             confirm(
-              `Please copy only number \nDo want to go with this:\n${text}`
+              `Please copy only number \nDo you want to go with this:\n${text}`
             )
           ) {
             input.value = text;
           }
         } else {
-          input.value = text;
+          input.value = number;
           if (input.value.length == 10) {
             input.style.border = "2px solid rgb(26, 196, 91)";
           }
@@ -57,7 +66,6 @@ window.onload = function () {
         confirm("number is not in correct format do you want to go with this")
       ) {
         window.location.replace(`https://wa.me/91${text}`);
-        
       }
     }
   }
