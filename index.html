@@ -39,7 +39,7 @@
               style="width: 70px; position: absolute; height: 90%; margin: 3px"
             />
             <datalist id="countryCode">
-              <option value="+91" selected>+91  </option>
+              <option value="+91" selected>+91</option>
               <option value="+44">+44</option>
               <option value="+1">+1</option>
               <!-- <option value="">+1</option> -->
@@ -53,10 +53,12 @@
               maxlength="10"
               pattern="^[6789]\d{9}$"
             />
+            <button class="btn btn-clear" id="clearNumber">x</button>
             <button class="btn btn-primary" id="go">Go</button>
           </div>
           <div class="form-group col-md-12 mt-3">
             <label for="textMsg">Text to include in chat</label>
+            <button id="clearText" class="btn btn-primary">Clear Text</button>
             <textarea class="form-control" id="textMsg" rows="3"></textarea>
           </div>
           <div id="errorMsg" class="text-danger"></div>
